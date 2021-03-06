@@ -1,0 +1,68 @@
+.conteiner{
+	position: relative;
+	left: 40%;
+	top: 200px;
+	width: 200px;
+	height: 100px;
+	perspective: 1000px;
+}
+.circle{
+	position: relative;
+	width: inherit;
+	height: inherit;
+	transform-style: preserve-3d;
+	transform: rotateX(-40deg);
+	transform-origin: center center -300px; 
+	animation-name: dondur;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	transition-timing-function: linear;
+}
+
+.side{
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background-color: rgba(100,100,100,0.5);
+}
+
+.r1{
+   transform: translateZ(100px);
+}
+.r2{
+	transform: rotateY(36deg) translateY(0px) translateX(150px)
+	translateZ(150px);
+}
+.r3{
+	transform: rotateY(-36deg) translateX(-150px)
+	translateZ(150px);
+}
+.r4{
+	transform: rotateY(72deg) translateX(300px)
+	translateZ(300px);
+}
+.r5{
+	transform: rotateY(-72deg) translateX(-300px)
+	translateZ(300px);
+}
+.r6{
+	transform: rotateY(-36deg) translateX(0px)
+	translateZ(-500px) rotateY(180deg);
+}
+.r7{
+   transform: translateZ(-500px) rotateY(180deg);
+}
+
+.r8{
+	transform: rotateY(36deg) translateX(0px)
+	translateZ(-500px) rotateY(180deg);
+}
+
+@keyframes dondur{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
